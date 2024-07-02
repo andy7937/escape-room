@@ -1,4 +1,8 @@
 # SOFTENG 206 - EscAIpe Room
+ - This was originally a private repo of 3 developers copied and made public
+
+<img width="1066" alt="Screen Shot 2024-07-02 at 12 13 01 PM" src="https://github.com/andy7937/escape-room/assets/126305769/848112d0-bdf1-4e85-a803-41b7d2c5b94c">
+
 
 ## To setup OpenAI's API
 
