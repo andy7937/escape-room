@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/18.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.TitleController">
+   <children>
+      <ImageView fx:id="mainbackground" fitHeight="669.0" fitWidth="888.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/title_screen/mainbackground1.png" />
+         </image>
+      </ImageView>
+      <RadioButton fx:id="easy" layoutX="109.0" layoutY="162.0" mnemonicParsing="false" selected="true" text="Easy (Unlimited hints)" textFill="#bababa">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="difficulty" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="hard" layoutX="109.0" layoutY="257.0" mnemonicParsing="false" text="Hard (No hints)" textFill="#bababa" toggleGroup="$difficulty">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="medium" layoutX="109.0" layoutY="210.0" mnemonicParsing="false" text="Medium (5 hints)" textFill="#bababa" toggleGroup="$difficulty">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="564.0" layoutY="163.0" mnemonicParsing="false" selected="true" text="6 minutes" textFill="#bababa">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="timeLimit" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="564.0" layoutY="258.0" mnemonicParsing="false" text="2 minutes" textFill="#bababa" toggleGroup="$timeLimit">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="564.0" layoutY="211.0" mnemonicParsing="false" text="4 minutes" textFill="#bababa" toggleGroup="$timeLimit">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </RadioButton>
+      <ImageView fx:id="mute" fitHeight="24.0" fitWidth="124.0" layoutX="644.0" layoutY="444.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/objects/mute.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="flavourTextImage" fitHeight="35.0" fitWidth="181.0" layoutX="51.0" layoutY="437.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/objects/disable_flavour_text.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="muteButton" layoutX="644.0" layoutY="439.0" mnemonicParsing="false" onAction="#onClickMute" onMouseEntered="#hoverMuteButton" onMouseExited="#unhoverMuteButton" opacity="0.0" prefHeight="35.0" prefWidth="128.0" text="Mute Audio" />
+      <Button fx:id="flavourTextButton" layoutX="55.0" layoutY="437.0" mnemonicParsing="false" onAction="#onClickFlavourText" onMouseEntered="#hoverFlavourTextButton" onMouseExited="#unhoverFlavourTextButton" opacity="0.0" prefHeight="35.0" prefWidth="181.0" text="Disable object flavour text" />
+      <ImageView fitHeight="88.0" fitWidth="756.0" layoutX="46.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/title_screen/set_difficulty.png" />
+         </image>
+      </ImageView>
+      <ImageView id="begin" fx:id="begin" fitHeight="150.0" fitWidth="200.0" layoutX="319.0" layoutY="406.0" onMouseClicked="#switchToGame" onMouseEntered="#hoverObject" onMouseExited="#unhoverObject" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/objects/begin.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="block" arcHeight="5.0" arcWidth="5.0" fill="#141414df" height="511.0" stroke="BLACK" strokeType="INSIDE" width="850.0" />
+      <ImageView fx:id="paragraph" fitHeight="424.0" fitWidth="738.0" layoutX="55.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/title_screen/context_paragraph.png" />
+         </image>
+      </ImageView>
+      <ImageView id="X" fx:id="exit" fitHeight="46.0" fitWidth="35.0" layoutX="744.0" layoutY="134.0" onMouseClicked="#clickX" onMouseEntered="#hoverObject" onMouseExited="#unhoverObject" pickOnBounds="true" preserveRatio="true">
+
+         <image>
+            <Image url="@../images/objects/X.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="fadeRectangle" arcHeight="5.0" arcWidth="5.0" height="500.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="840.0" />
+      <ImageView fitHeight="535.0" fitWidth="888.0" layoutX="-14.0" layoutY="-10.0">
+         <image>
+            <Image url="@../images/title_screen/border.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

@@ -1,0 +1,5 @@
+solar_panel
+rocks
+helmet
+boot
+tire
